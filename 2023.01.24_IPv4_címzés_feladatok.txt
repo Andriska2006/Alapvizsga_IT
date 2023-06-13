@@ -1,0 +1,22 @@
+1. Mi a 192.168.10.0/28 hálózat:     /28=11111111.11111111.11111111.11110000
+-hálózati címe: 192.168.10.0
+-alhálózati maszkja decimális formában: 255.255.255.240
+-hálózat mérete: 32-28=4 2^4=16
+-szórási címe: 192.168.10.15
+-állomás címek tartománya: 192.168.10.1-192.168.10.14
+
+2. Adott a 192.168.99.0 hálózat a 255.255.255.192 alhálózati maszkkal.
+-mi a perjeles alakja ennek a hálózatnak:192.168.99.0/26
+-hálózat mérete: 32-26=6 2^6=64
+-hány db állomás IP-cím található ebben a hálózatban: 64-2=62
+-hálózati címtartomány: 192.168.99.0-192.168.99.63
+-állomás címtartomány: 192.168.99.1-192.168.99.62
+-hálózati cím: 192.168.99.0
+-szórási cím:  192.168.99.63
+
+3. A 192.168.100.0 hálózatban 20 db számítógép számára szeretnénk a lehető legkisebb alhálózatot létrehozni. 
+Adjuk meg ennek a hálózatnak az adatait!
+- hálózat mérete: 32
+- a hálózat perjeles alakja: 2^5=32  32-5=27  /27 = 11111111.11111111.11111111.11100000
+- alhálózati maszk: 255.255.255.224
+- szórási cím: 192.168.100.31

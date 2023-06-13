@@ -1,0 +1,38 @@
+192.168.203.0/24
+Remote-2 (32 host) 64 méretű 192.168.203.0-.63/26
+          64=2^6 -> 32-6=26 -> /26  -> 255.255.255.192
+   első cím: 192.168.203.1 (router)
+   második cím: 192.168.203.2 (switch)
+   utolsó cím: 192.168.203.62 (PC)
+
+HQ-2 (21 host)     32 méretű  192.168.203.64-.95/27
+          32=2^5 -> 32-5=27 -> /27  -> 255.255.255.224
+   első cím: 192.168.203.65 (router)
+   második cím: 192.168.203.66 (switch)
+   utolsó cím: 192.168.203.94 (PC)
+
+Remote-1 (19 host) 32 méretű  192.168.203.96-.127/27
+          32=2^5 -> 32-5=27 -> /27  -> 255.255.255.224
+   első cím: 192.168.203.97 (router)
+   második cím: 192.168.203.98 (switch)
+   utolsó cím: 192.168.203.126 (PC)
+
+HQ-1 (14 host)     16 méretű
+HQ-Remote (2 host) 4 méretű
+
+Router config:
+--------------
+enable
+configure terminal
+interface gigabitethernet 0/0
+ip address 192.168.203.1 255.255.255.192
+no shutdown
+
+Switch config:
+---------------
+enable
+configure terminal
+interface vlan 1
+ip address 192.168.203.2 255.255.255.192
+no shutdown
+ip default-gateway 192.168.203.1
